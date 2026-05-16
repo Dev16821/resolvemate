@@ -1,28 +1,46 @@
-from memory import remember_customer, recall_customer
-
 from memory import remember_customer
 from agent import generate_support_response
 
 
-remember_customer(
-    customer_name="Ravi Kumar",
-    issue="Wrong food order delivered",
-    resolution="Full refund requested",
-    rejected_solution="Coupon",
-    tone="Apologetic and direct"
-)
+def main():
+    print("\n=== ResolveMate ===")
+    print("1. Store customer memory")
+    print("2. Generate support response")
 
-response = generate_support_response(
-    customer_name="Ravi Kumar",
-    current_issue="Late delivery"
-)
+    choice = input("\nChoose an option: ")
 
-print(response)
+    if choice == "1":
+        customer_name = input("Customer name: ")
+        issue = input("Previous issue: ")
+        resolution = input("Previous resolution: ")
+        rejected_solution = input("Rejected solution: ")
+        tone = input("Preferred tone: ")
 
-memory = recall_customer("Ravi Kumar")
+        remember_customer(
+            customer_name=customer_name,
+            issue=issue,
+            resolution=resolution,
+            rejected_solution=rejected_solution,
+            tone=tone
+        )
 
-if memory:
-    print("Memory found:")
-    print(memory)
-else:
-    print("No memory found.")
+        print("\nMemory stored successfully.")
+
+    elif choice == "2":
+        customer_name = input("Customer name: ")
+        current_issue = input("Current issue: ")
+
+        response = generate_support_response(
+            customer_name=customer_name,
+            current_issue=current_issue
+        )
+
+        print("\nGenerated Response:")
+        print(response)
+
+    else:
+        print("\nInvalid option.")
+
+
+if __name__ == "__main__":
+    main()
