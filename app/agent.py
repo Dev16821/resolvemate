@@ -4,12 +4,12 @@ memory_adapter = HindsightAdapter()
 
 
 def generate_support_response(customer_name, current_issue):
-    recalled_memory = memory_adapter.recall_memory(
+    memory = memory_adapter.recall_memory(
         customer_name=customer_name,
         current_issue=current_issue
     )
 
-    if recalled_memory is None:
+    if memory is None:
         return f"""
 No previous memory found for {customer_name}.
 
@@ -22,13 +22,25 @@ Our support team will review this issue and assist you as soon as possible.
     return f"""
 Previous memory found for {customer_name}.
 
-Recalled Context:
-{recalled_memory}
+Past Issue:
+{memory["issue"]}
+
+Past Resolution:
+{memory["resolution"]}
+
+Rejected Solution:
+{memory["rejected_solution"]}
+
+Preferred Tone:
+{memory["tone"]}
 
 Draft Response:
 Hi {customer_name}, we sincerely apologize that you are facing another issue.
 
-Based on your previous interaction, we will avoid repeating solutions that did not work for you.
+We noticed that you previously experienced: {memory["issue"]}.
+At that time, your preferred resolution was: {memory["resolution"]}.
 
-Regarding your current issue: {current_issue}, we will handle this with your past preferences in mind.
+Since you previously rejected {memory["rejected_solution"]}, we will avoid suggesting that again.
+
+Regarding your current issue: {current_issue}, we will respond in an {memory["tone"].lower()} manner.
 """
