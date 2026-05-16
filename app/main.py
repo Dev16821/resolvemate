@@ -1,5 +1,7 @@
-from memory import remember_customer
 from agent import generate_support_response
+from hindsight_adapter import HindsightAdapter
+
+memory_adapter = HindsightAdapter()
 
 
 def main():
@@ -16,7 +18,7 @@ def main():
         rejected_solution = input("Rejected solution: ")
         tone = input("Preferred tone: ")
 
-        remember_customer(
+        memory_adapter.retain_memory(
             customer_name=customer_name,
             issue=issue,
             resolution=resolution,
