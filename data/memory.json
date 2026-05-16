@@ -1,0 +1,9 @@
+[
+    {
+        "customer_name": "Ravi Kumar",
+        "issue": "Wrong food order delivered",
+        "resolution": "Full refund requested",
+        "rejected_solution": "Coupon",
+        "tone": "Apologetic and direct"
+    }
+]
