@@ -12,5 +12,12 @@
         "resolution": "coupon code that is available for 10 days",
         "rejected_solution": "idk",
         "tone": "professional"
+    },
+    {
+        "customer_name": "Ravi Kumar",
+        "issue": "Wrong food order delivered",
+        "resolution": "Full refund requested",
+        "rejected_solution": "Coupon",
+        "tone": "Apologetic and direct"
     }
 ]
