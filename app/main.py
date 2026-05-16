@@ -1,5 +1,6 @@
 from agent import generate_support_response
 from hindsight_adapter import HindsightAdapter
+import json
 
 memory_adapter = HindsightAdapter()
 
@@ -14,11 +15,28 @@ def get_required_input(label):
         print("This field cannot be empty. Try again.")
 
 
+def load_sample_data():
+    with open("data/sample_customers.json", "r") as file:
+        customers = json.load(file)
+
+    for customer in customers:
+        memory_adapter.retain_memory(
+            customer_name=customer["customer_name"],
+            issue=customer["issue"],
+            resolution=customer["resolution"],
+            rejected_solution=customer["rejected_solution"],
+            tone=customer["tone"]
+        )
+
+    print(f"\nLoaded {len(customers)} sample customers successfully.")
+
+
 def show_menu():
     print("\n=== ResolveMate ===")
     print("1. Store customer memory")
     print("2. Generate support response")
-    print("3. Exit")
+    print("3. Load sample data")
+    print("4. Exit")
 
 
 def main():
@@ -57,6 +75,9 @@ def main():
             print(response)
 
         elif choice == "3":
+            load_sample_data()
+
+        elif choice == "4":
             print("\nExiting ResolveMate. Goodbye.")
             break
 
