@@ -95,3 +95,13 @@ HINDSIGHT_API_KEY=your_key_here
 HINDSIGHT_PROJECT_ID=your_project_id_here
 ```
 Note: Currently using local JSON memory. Hindsight SDK integration is optional for future enhancement.
+
+---
+
+## Demo Evidence
+
+ResolveMate demonstrates memory-driven behavior:
+
+1. First interaction: no memory exists, so the response is generic.
+2. Memory storage: customer issue, resolution, rejected solution, and tone are stored.
+3. Later interaction: the agent recalls previous context and generates a more personalized response.
