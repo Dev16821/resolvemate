@@ -39,3 +39,6 @@ def recall_customer(customer_name):
             return item
 
     return None
+
+def get_all_memories():
+    return load_memory()

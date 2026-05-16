@@ -30,3 +30,6 @@ class HindsightAdapter:
         current_issue=None
     ):
         return recall_customer(customer_name)
+    
+    def get_all_memories(self):
+        return recall_customer("__all__")

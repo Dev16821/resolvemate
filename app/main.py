@@ -30,13 +30,31 @@ def load_sample_data():
 
     print(f"\nLoaded {len(customers)} sample customers successfully.")
 
+def view_all_memories():
+    memories = memory_adapter.get_all_memories()
+
+    if not memories:
+        print("\nNo memories stored yet.")
+        return
+
+    print("\n=== Stored Memories ===")
+
+    for index, memory in enumerate(memories, start=1):
+        print(f"\nMemory {index}")
+        print(f"Customer: {memory['customer_name']}")
+        print(f"Issue: {memory['issue']}")
+        print(f"Resolution: {memory['resolution']}")
+        print(f"Rejected Solution: {memory['rejected_solution']}")
+        print(f"Tone: {memory['tone']}")
+
 
 def show_menu():
     print("\n=== ResolveMate ===")
     print("1. Store customer memory")
     print("2. Generate support response")
     print("3. Load sample data")
-    print("4. Exit")
+    print("4. View all memories")
+    print("5. Exit")
 
 
 def main():
@@ -78,11 +96,14 @@ def main():
             load_sample_data()
 
         elif choice == "4":
+            view_all_memories()
+
+        elif choice == "5":
             print("\nExiting ResolveMate. Goodbye.")
             break
 
         else:
-            print("\nInvalid option. Choose 1, 2, or 3.")
+            print("\nInvalid option. Choose 1, 2, 3, 4, or 5.")
 
 
 if __name__ == "__main__":
