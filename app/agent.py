@@ -1,4 +1,4 @@
-from app.hindsight_adapter import HindsightAdapter
+from hindsight_adapter import HindsightAdapter
 
 memory_adapter = HindsightAdapter()
 

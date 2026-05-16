@@ -1,4 +1,4 @@
-from app.memory import (
+from memory import (
     remember_customer,
     recall_customer,
     get_all_memories
