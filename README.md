@@ -1,6 +1,6 @@
 # ResolveMate
 
-A customer support memory agent that stores customer complaints, resolutions, rejected solutions, and tone preferences—then recalls that memory to generate better support responses.
+A customer support memory agent that stores customer complaints, resolutions, rejected solutions, and tone preferences then recalls that memory to generate better support responses.
 
 ## Problem
 Customer support teams often forget previous customer complaints, rejected solutions, and customer preferences. This leads to generic responses and repeated customer frustration.
