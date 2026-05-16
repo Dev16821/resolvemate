@@ -4,44 +4,54 @@ from hindsight_adapter import HindsightAdapter
 memory_adapter = HindsightAdapter()
 
 
-def main():
+def show_menu():
     print("\n=== ResolveMate ===")
     print("1. Store customer memory")
     print("2. Generate support response")
+    print("3. Exit")
 
-    choice = input("\nChoose an option: ")
 
-    if choice == "1":
-        customer_name = input("Customer name: ")
-        issue = input("Previous issue: ")
-        resolution = input("Previous resolution: ")
-        rejected_solution = input("Rejected solution: ")
-        tone = input("Preferred tone: ")
+def main():
+    while True:
+        show_menu()
 
-        memory_adapter.retain_memory(
-            customer_name=customer_name,
-            issue=issue,
-            resolution=resolution,
-            rejected_solution=rejected_solution,
-            tone=tone
-        )
+        choice = input("\nChoose an option: ")
 
-        print("\nMemory stored successfully.")
+        if choice == "1":
+            customer_name = input("Customer name: ")
+            issue = input("Previous issue: ")
+            resolution = input("Previous resolution: ")
+            rejected_solution = input("Rejected solution: ")
+            tone = input("Preferred tone: ")
 
-    elif choice == "2":
-        customer_name = input("Customer name: ")
-        current_issue = input("Current issue: ")
+            memory_adapter.retain_memory(
+                customer_name=customer_name,
+                issue=issue,
+                resolution=resolution,
+                rejected_solution=rejected_solution,
+                tone=tone
+            )
 
-        response = generate_support_response(
-            customer_name=customer_name,
-            current_issue=current_issue
-        )
+            print("\nMemory stored successfully.")
 
-        print("\nGenerated Response:")
-        print(response)
+        elif choice == "2":
+            customer_name = input("Customer name: ")
+            current_issue = input("Current issue: ")
 
-    else:
-        print("\nInvalid option.")
+            response = generate_support_response(
+                customer_name=customer_name,
+                current_issue=current_issue
+            )
+
+            print("\nGenerated Response:")
+            print(response)
+
+        elif choice == "3":
+            print("\nExiting ResolveMate. Goodbye.")
+            break
+
+        else:
+            print("\nInvalid option. Choose 1, 2, or 3.")
 
 
 if __name__ == "__main__":

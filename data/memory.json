@@ -19,5 +19,12 @@
         "resolution": "Full refund requested",
         "rejected_solution": "Coupon",
         "tone": "Apologetic and direct"
+    },
+    {
+        "customer_name": "Deviprasad Reddy",
+        "issue": "Late food delivery",
+        "resolution": "7 Days temperory coupon",
+        "rejected_solution": "Poor service",
+        "tone": "Professional"
     }
 ]
