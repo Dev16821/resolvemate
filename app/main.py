@@ -4,6 +4,16 @@ from hindsight_adapter import HindsightAdapter
 memory_adapter = HindsightAdapter()
 
 
+def get_required_input(label):
+    while True:
+        value = input(label).strip()
+
+        if value:
+            return value
+
+        print("This field cannot be empty. Try again.")
+
+
 def show_menu():
     print("\n=== ResolveMate ===")
     print("1. Store customer memory")
@@ -15,14 +25,14 @@ def main():
     while True:
         show_menu()
 
-        choice = input("\nChoose an option: ")
+        choice = input("\nChoose an option: ").strip()
 
         if choice == "1":
-            customer_name = input("Customer name: ")
-            issue = input("Previous issue: ")
-            resolution = input("Previous resolution: ")
-            rejected_solution = input("Rejected solution: ")
-            tone = input("Preferred tone: ")
+            customer_name = get_required_input("Customer name: ")
+            issue = get_required_input("Previous issue: ")
+            resolution = get_required_input("Previous resolution: ")
+            rejected_solution = get_required_input("Rejected solution: ")
+            tone = get_required_input("Preferred tone: ")
 
             memory_adapter.retain_memory(
                 customer_name=customer_name,
@@ -35,8 +45,8 @@ def main():
             print("\nMemory stored successfully.")
 
         elif choice == "2":
-            customer_name = input("Customer name: ")
-            current_issue = input("Current issue: ")
+            customer_name = get_required_input("Customer name: ")
+            current_issue = get_required_input("Current issue: ")
 
             response = generate_support_response(
                 customer_name=customer_name,
