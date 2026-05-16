@@ -40,5 +40,12 @@
         "resolution": "Replacement request",
         "rejected_solution": "Store credit",
         "tone": "Clear and urgent"
+    },
+    {
+        "customer_name": "Test User",
+        "issue": "Test issue",
+        "resolution": "Test resolution",
+        "rejected_solution": "Test rejected",
+        "tone": "Test tone"
     }
 ]

@@ -1,6 +1,7 @@
-from memory import (
+from app.memory import (
     remember_customer,
-    recall_customer
+    recall_customer,
+    get_all_memories
 )
 
 
@@ -32,4 +33,4 @@ class HindsightAdapter:
         return recall_customer(customer_name)
     
     def get_all_memories(self):
-        return recall_customer("__all__")
+        return get_all_memories()

@@ -1,5 +1,5 @@
-from agent import generate_support_response
-from hindsight_adapter import HindsightAdapter
+from app.agent import generate_support_response
+from app.hindsight_adapter import HindsightAdapter
 import json
 
 memory_adapter = HindsightAdapter()
