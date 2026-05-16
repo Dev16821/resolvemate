@@ -47,5 +47,33 @@
         "resolution": "Test resolution",
         "rejected_solution": "Test rejected",
         "tone": "Test tone"
+    },
+    {
+        "customer_name": "Deviprasad",
+        "issue": "Late delivery",
+        "resolution": "7 Days temperory discount coupon code",
+        "rejected_solution": "rejected coupon",
+        "tone": "Professional"
+    },
+    {
+        "customer_name": "Ravi Kumar",
+        "issue": "Wrong food order delivered",
+        "resolution": "Full refund requested",
+        "rejected_solution": "Coupon",
+        "tone": "Apologetic and direct"
+    },
+    {
+        "customer_name": "Ananya Sharma",
+        "issue": "Late grocery delivery",
+        "resolution": "Priority delivery and delivery fee refund",
+        "rejected_solution": "Generic apology",
+        "tone": "Calm and professional"
+    },
+    {
+        "customer_name": "Rahul Mehta",
+        "issue": "Damaged electronics item received",
+        "resolution": "Replacement request",
+        "rejected_solution": "Store credit",
+        "tone": "Clear and urgent"
     }
 ]
