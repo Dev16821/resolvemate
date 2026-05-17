@@ -75,5 +75,40 @@
         "resolution": "Replacement request",
         "rejected_solution": "Store credit",
         "tone": "Clear and urgent"
+    },
+    {
+        "customer_name": "Dev",
+        "issue": "Late delivery",
+        "resolution": "Coupon code",
+        "rejected_solution": "Invalid coupon",
+        "tone": "professional"
+    },
+    {
+        "customer_name": "Ravi kumar",
+        "issue": "Wrong food delivery",
+        "resolution": "full refund requested",
+        "rejected_solution": "coupon",
+        "tone": "Apologetic and Direct"
+    },
+    {
+        "customer_name": "Ravi kumar",
+        "issue": "Wrong delivery",
+        "resolution": "Full refund requested",
+        "rejected_solution": "Coupon",
+        "tone": "Apologetic and direct"
+    },
+    {
+        "customer_name": "Ravi kumar",
+        "issue": "wrong food delivery",
+        "resolution": "full refund requested",
+        "rejected_solution": "coupon",
+        "tone": "apologetic and direct"
+    },
+    {
+        "customer_name": "Ravi kumar",
+        "issue": "worng food order delivery",
+        "resolution": "full refund",
+        "rejected_solution": "coupon",
+        "tone": "apologetic and direct"
     }
 ]
