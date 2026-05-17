@@ -10,4 +10,4 @@ https://youtu.be/It5bhBWUlys
 https://dev.to/vicky_168218/-how-hindsight-helped-my-agent-remember-rejected-solutions-2jf3
 
 ## LinkedIn Post
-PASTE_YOUR_LINKEDIN_POST_LINK
+https://www.linkedin.com/posts/v-deviprasad-reddy_ai-aiagents-hindsight-activity-7461721223379689473-lrKc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEs1bHsBpakTRVPvvZ8TYpG7XTr-3kxfO6Q
